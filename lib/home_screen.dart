@@ -9,9 +9,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class HomeScreenState extends State<HomeScreen> {
-  static const String EVENT_CHANNEL = "platform_channel_events/connectivity";
-  final eventChannel = EventChannel(EVENT_CHANNEL);
-  late final networkStream;
+  static const String _eventChannel = "platform_channel_events/connectivity";
+  final eventChannel = const EventChannel(_eventChannel);
+  late final Stream<int> networkStream;
   @override
   void initState() {
     super.initState();
